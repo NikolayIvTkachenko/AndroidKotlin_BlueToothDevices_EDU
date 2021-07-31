@@ -2,3 +2,4 @@ rootProject.name = "AppBlueToothDevices"
 include ':app'
 include ':app_version_2'
 include ':app_version_3'
+include ':app_version_04_ble'
