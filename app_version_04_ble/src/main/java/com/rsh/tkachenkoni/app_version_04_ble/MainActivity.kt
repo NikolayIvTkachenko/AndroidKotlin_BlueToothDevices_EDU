@@ -7,9 +7,9 @@ import android.bluetooth.le.ScanFilter
 import android.bluetooth.le.ScanResult
 import android.bluetooth.le.ScanSettings
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -78,6 +78,18 @@ class MainActivity : AppCompatActivity() {
                 }
 
 
+
+            }
+            override fun onBatchScanResults(results: List<ScanResult?>?) {
+                // Ignore for now
+                Log.d(TAG, "onBatchScanResults")
+                Log.d(TAG, "results?.size = " + results?.size)
+            }
+
+            override fun onScanFailed(errorCode: Int) {
+                // Ignore for now
+                Log.d(TAG, "onScanFailed")
+                Log.d(TAG, "errorCode = " + errorCode)
 
             }
         }
